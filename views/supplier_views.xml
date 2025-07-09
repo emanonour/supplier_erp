@@ -1,0 +1,42 @@
+<odoo>
+    <record id="view_supplier_erp_form" model="ir.ui.view">
+        <field name="name">supplier.erp.form</field>
+        <field name="model">supplier.erp</field>
+        <field name="arch" type="xml">
+            <form string="Supplier ERP">
+                <sheet>
+                    <group>
+                        <field name="supplier_id"/>
+                        <field name="name"/>
+                        <field name="website"/>
+                        <field name="presence_worldwide"/>
+                        <field name="business_category"/>
+                        <field name="business_type"/>
+                        <field name="supplier_type"/>
+                        <field name="supplier_ranking"/>
+                        <field name="account_payable_id"/>
+                        <field name="vendor_advance_account_id"/>
+                        <field name="tpra_certified"/>
+                        <field name="tpra_cert_no" />
+                        <field name="tpra_cert_expiry" />
+                        <field name="tpra_cert_attachment" />
+                        <field name="tax_certified"/>
+                        <field name="tax_cert_no" />
+                        <field name="tax_cert_expiry" />
+                        <field name="tax_cert_attachment" />
+                        <field name="account_no"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_supplier_erp" model="ir.actions.act_window">
+        <field name="name">Suppliers</field>
+        <field name="res_model">supplier.erp</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_supplier_root" name="Suppliers"/>
+    <menuitem id="menu_supplier_erp" name="ERP Supplier" parent="menu_supplier_root" action="action_supplier_erp"/>
+</odoo>
